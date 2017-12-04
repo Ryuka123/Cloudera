@@ -136,6 +136,102 @@ cat NodeDetails
 The  NodeDetails  file  contains  Node  and  URI  details  used  by  the  Cloudera  test  drive environment.These are gathered using a script which pulls required data using the API calls.
 <img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/cloudera-node-details.png"/>
 
+## Accessing Cloudera Manager from Cloudera Director Web UI
+After deploying a cluster, you can manage it using Cloudera Manager.
+
+1. Access the Cloudera Director Web UI using the Cloudera Director Access URL provided in the Access Information. Enter it into a web browser.
+Eg:cldrhyic.eastus.cloudapp.azure.com:7189
+<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/cloudera-webUI.png"/>
+
+2. Accept the End User License Terms and Conditions and click on Continue.
+<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/cloudera-click-continue.png"/>
+
+3. Login to the Cloudera Director web console using CD-WEB UI Username and Password from the Access Information.
+<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/login-cloudera-director.png"/>
+
+4. The  Cloudera  Director  console  should  open.  Click  on  the Cloudera  Manager link  from the Cloudera Director Dashboard, as shown below.
+<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/click-clouderamanager-link.png"/>
+
+5. Use the Cloudera Manager FQDN address, along with the port number, and paste it in new browser tab.
+EX:cdedge-4f171cc5.eastus.cloudapp.azure.com:7180
+<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/clodera-FQDN-login.png"/>
+
+6. Login to the Cloudera Manager Console using CM-WEB UI Username and CM-WEB UI Password from the Access Information.
+<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/login-clouderManager-console.png"/>
+
+Note:The next step is to Restart Stale Services. We must do this to get the Azure Service Principle updated to the configuration file site-core.xml, which is required to integrate with Azure Data Lake Store.
+
+7. In Cloudera Manager, click on the HDFS-1 service to Restart Stale Services.
+<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/cloudera-click-HDFS.png"/>
+
+8. Click on the Restart Stale Services icon as shown in the below screenshot.
+<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/Cloudera-click-restart-Stale-services.png"/>
+
+9. Click  on  the Restart  Stale  Services button  so  the  cluster  can  read  the  new  configuration information.
+<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/cloudera-click-Restart-stale2.png"/>
+
+10. Click on the Restart Now button
+<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/Cloudera-click-restart-Now.png"/>
+
+11. Wait until all requested services are restarted. Once all the services are restarted, click on the Finish button.
+<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/Cloudera-click-finish.png"/>
+
+12. Now we have the Cloudera Director ready, with Cloudera Manager and Cluster (1 master and 3 workers).
+
+Note: Please visit section in the Reference section later in this guide for additional details and help for any error messages you may encounter.
+
+## Hue
+Hue is a set of web applications that enable you to interact with a CDH cluster. Hue applications let you browse HDFS and manage a Hive metastore. They also let you run Hive and Cloudera Impala queries, HBase and Sqoop commands, Pig scripts, MapReduce jobs, and Oozie workflows.
+
+1. Copy the Cloudera Hue Web URL using the cloudera master DNS server url with port 8888 as shown in below example and paste it in browser – which opens the Hue console.
+Example: http://cdmstr-6ce17224.eastus.cloudapp.azure.com:8888
+<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/cloudera-hue.png"/>
+
+2. Create a Hue Account by giving Cloudera Hue Web UI Username/Password from the NodeDetailsfile. (Username/Password: admin/admin)
+<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/cloudera-hue-create-account.png"/>
+
+3. You will login into the Hue dashboard. On the right side of the page, click on the HDFS browser icon, as shown in the below screenshot.
+
+Note: CDH 5.12 has a new Hue UI. We recommend switching to Hue 3 from the admintab (see screenshot below).
+
+<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/cloudera-hue-page.png"/>
+
+4. Copy the data of inputfile from the below link. Give any name to the file (Eg: 'data' or 'input'), then save it in input.txt format.
+https://aztdrepo.blob.core.windows.net/clouderadirector/inputfile.txt Once ready, click on Upload on the Hue file browser page (see below).
+
+Note: Please ensure the inputfile is uploaded to the path /user/admin (see below):
+
+<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/cloudera-hue-click-upload.png"/>
+
+5. Select the saved .txt file to upload it.
+<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/cloudera-hue-textfiles.png"/>
+
+<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/clousera-hue-uploadfiles2.png"/>
+
+6. The .txt file is now uploaded to Hue. The Spark application will use this data as input and provide the output to ADLS.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+
+
 
 
 
