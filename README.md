@@ -33,18 +33,21 @@ Cloudera provides a scalable, flexible, integrated platform that makes it easy t
 increasing volumes and varieties  of data  in your enterprise. Cloudera products  and solutions
 enable you to deploy and manage Apache Hadoop and related projects, manipulate and analyze
 your data, and keep that data secure and protected.
+
 Cloudera develops a Hadoop platform that integrates the most popular Apache Hadoop open
 source software within one place. Hadoop is an ecosystem, and setting a cluster manually is a
 pain. Going through each node, deploying the configuration though the cluster, deploying your
 services, and restarting them on a wide cluster is a major drawback of distributed system and
 require lot of automation for administration. Cloudera developed a big data Hadoop distribution
 that handles installation and updates on a cluster in few clicks.
+
 Cloudera  also  develop  their  own  projects  such  as  Impala  or  Kudu  that  improve  hadoop
 integration and responsiveness in the industry.
 
 ## Cloudera Director
 Cloudera Director enables reliable self-service for using CDH and Cloudera Enterprise Data
 Hub in the cloud.
+
 Cloudera Director provides a single-pane-of-glass administration experience for central IT to
 reduce  costs  and  deliver  agility,  and  for  end-users  to  easily  provision  and  scale  clusters.
 Advanced users can interact with Cloudera Director programmatically through the REST API or
@@ -53,6 +56,7 @@ Cloudera Director is designed for both long running and transient clusters. With
 clusters, you deploy one or more clusters that you can scale up or down to adjust to demand.
 With transient clusters, you can launch a cluster, schedule any jobs, and shut the cluster down
 after the jobs complete.
+
 The Cloudera  Director  server is designed to  run  in a  centralized  setup,  managing multiple
 Cloudera  Manager  instances  and  CDH clusters,  with  multiple  users and user accounts. The
 server  works  well  for  launching  and  managing  large  numbers  of  clusters  in  a  production
@@ -73,6 +77,7 @@ sometimes take up to 45 minutes. While you wait, please feel free to review to h
 in this manual and on Cloudera’s Azure Marketplace product page, or on the Cloudera website.
 Please also consider watching the demo video showcased on the test drive launch page on the
 Azure Marketplace web site.
+
 The test drive provisions Cloudera Director, the environment, Cloudera Manager, and a cluster
 consisting of 1 master node and 3 worker nodes. The test drive also integrates with Azure Data
 Lake Store.
