@@ -74,7 +74,7 @@ cluster health information and metrics, as well as configure Cloudera Manager.
 # 2.Objective
 NOTE: As this test drive provides access to the full Cloudera Director platform, deployment can
 sometimes take up to 45 minutes. While you wait, please feel free to review to helpful content
-in this manual and on Cloudera’s Azure Marketplace product page, or on the Cloudera website.
+in this manual and on [Cloudera’s Azure Marketplace product page](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/cloudera.clouderaedh), or on the Cloudera website.
 Please also consider watching the demo video showcased on the test drive launch page on the
 Azure Marketplace web site.
 
