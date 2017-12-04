@@ -6,7 +6,8 @@
 
 <!-- TOC -->
 ## Contents
-1.[About Cloudera](#about-cloudera)
+1. [About Cloudera](#about-cloudera)
+ 1.1 [Cloudera Director](#cloudera-director)
 
 
 
