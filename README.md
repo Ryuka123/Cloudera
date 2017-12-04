@@ -71,7 +71,7 @@ cluster health information and metrics, as well as configure Cloudera Manager.
 
 <img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/cloudera-manager.png"/>
 
-# 2.Objective
+# 2. Objective
 NOTE: As this test drive provides access to the full Cloudera Director platform, deployment can
 sometimes take up to 45 minutes. While you wait, please feel free to review to helpful content
 in this manual and on [Cloudera’s Azure Marketplace product page](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/cloudera.clouderaedh), or on the Cloudera website.
@@ -81,6 +81,74 @@ Azure Marketplace web site.
 The test drive provisions Cloudera Director, the environment, Cloudera Manager, and a cluster
 consisting of 1 master node and 3 worker nodes. The test drive also integrates with Azure Data
 Lake Store.
+
+The use case scenario for this test drive is to provide users with a test Azure Data Lake Store and:
+1.  Run the WordCount app with Hadoop/Spark on ADLS.
+2.  Create a Hive table on the output, and query Hive from Hue.
+3.  Run query using Impala from Hue or Power BI.
+The following diagram shows how the data in this test case flows from a .TXT file via Hue
+to
+ADLS, processed by Spark.
+
+<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/cloudera-lab-dataflow.png"/>
+
+
+# 3. Getting Started
+## Accessing Cloudera Backend cluster details
+
+Please login to the Azure portal and go to the Cloudera Director HOL Azure resource group
+allocated to you. Copy the DNS URLs for the Cloudera Director,Manager and Master nodes.
+
+1. Go to the Resource Groups section and search by name for the Resource Group provided
+to you.
+<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/Click-on-RG.png"/>
+
+2. Go to the virtual machine starting with "cldr" Cloudera Director DNS Name.
+<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/Click-on-VM.png"/>
+
+Click on the Cloudera Director virtual machine to get the DNS name. (See below)
+<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/Cloudera-copy-DNSname.png"/>
+
+3. Go to the virtual machine starting with “cdedge” for the Cloudera Manager DNS name.
+<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/Cloudera-click-on-vm2.png"/>
+
+Click on the Cloudera Manager virtual machine to get the DNS name. (See below)
+<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/Cloudera-click-on-DNSname.png"/>
+
+4. Go to the virtual machine starting with “cdmstr” for the Cloudera Master DNS name.
+<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/cloudera-click-mastervm.png"/>
+
+Click on the Cloudera Master virtual machine to get the DNS name. (See below).
+<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/cloudera-cpopy-masterdns.png"/>
+
+You must also access the Cloudera backend cluster details to get the  Node Details. This is
+explained below.
+1. Log in to the Cloudera Director VM using the Cloudera Director FQDN address gathered  from  the previous steps, and use an SSH tool like PuTTY (or Terminal on Mac), which we’ll refer to in this walkthrough.[(Download PuTTY here)](https://putty.en.softonic.com/).
+E.g. cldrhyic.eastus.cloudapp.azure.com
+<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/Clouder-putty.png"/>
+
+2. Once connected, login to the Cloudera Director VM using the Director Username and then the Director Password from the provided test drive access credentials.
+(Note:Passwords are hidden when typed or pasted in Linux terminals)
+<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/cloudera-login-using-putty.png"/>
+
+All the Cloudera Backend cluster details are present in the NodeDetails file. Copy the NodeDetails into a text file or Word document for  reference, these details will be used later. To open the NodeDetails file use the following command.
+cat NodeDetails
+The  NodeDetails  file  contains  Node  and  URI  details  used  by  the  Cloudera  test  drive environment.These are gathered using a script which pulls required data using the API calls.
+<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/cloudera-node-details.png"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   
 
