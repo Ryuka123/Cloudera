@@ -395,6 +395,7 @@ b)Drag the columns that you want to use and represent in your pie-chart from the
 
 5. Click on Load.
 6. Select the Data button to visualize the content.
+
 ![](Images/PowerBI-load-selectdata.png "")
 
 You have successfully visualized the content exported from impala using powerBI.
