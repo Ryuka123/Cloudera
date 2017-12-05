@@ -109,27 +109,33 @@ to you.
 ![](Images/Click-on-RG.png "")
 
 2. Go to the virtual machine starting with "cldr" Cloudera Director DNS Name.
+
 ![](Images/Click-on-VM.png "")
 
 Click on the Cloudera Director virtual machine to get the DNS name. (See below)
+
 ![](Images/Cloudera-copy-DNSname.png "")
 
 3. Go to the virtual machine starting with “cdedge” for the Cloudera Manager DNS name.
+
 ![](Images/Cloudera-click-on-vm2.png "")
 
 Click on the Cloudera Manager virtual machine to get the DNS name. (See below)
+
 ![](Images/Cloudera-click-on-DNSname.png "")
 
 4. Go to the virtual machine starting with “cdmstr” for the Cloudera Master DNS name.
+
 ![](Images/cloudera-click-mastervm.png "")
 
 Click on the Cloudera Master virtual machine to get the DNS name. (See below).
+
 ![](Images/cloudera-cpopy-masterdns.png "")
 
 You must also access the Cloudera backend cluster details to get the  Node Details. This is
 explained below.
 1. Log in to the Cloudera Director VM using the Cloudera Director FQDN address gathered  from  the previous steps, and use an SSH tool like PuTTY (or Terminal on Mac), which we’ll refer to in this walkthrough.[(Download PuTTY here)](https://putty.en.softonic.com/).E.g. cldrhyic.eastus.cloudapp.azure.com
- ![](Images/Clouder-putty.png "")
+![](Images/Clouder-putty.png "")
 
 2. Once connected, login to the Cloudera Director VM using the Director Username and then the Director Password from the provided test drive access credentials.
 (Note:Passwords are hidden when typed or pasted in Linux terminals)
@@ -175,7 +181,7 @@ Note:The next step is to Restart Stale Services. We must do this to get the Azur
 9. Click  on  the Restart  Stale  Services button  so  the  cluster  can  read  the  new  configuration information.
 ![](Images/cloudera-click-Restart-stale2.png "")
 
-10. Click on the Restart Now button
+10. Click on the Restart Now button.
 ![](Images/Cloudera-click-restart-Now.png "")
 
 11. Wait until all requested services are restarted. Once all the services are restarted, click on the Finish button.
@@ -199,7 +205,6 @@ Example: http://cdmstr-6ce17224.eastus.cloudapp.azure.com:8888
 3. You will login into the Hue dashboard. On the right side of the page, click on the HDFS browser icon, as shown in the below screenshot.
 
 Note: CDH 5.12 has a new Hue UI. We recommend switching to Hue 3 from the admintab (see screenshot below).
-
 ![](Images/cloudera-hue-page.png "")
 
 4. Copy the data of inputfile from the below link. Give any name to the file (Eg: 'data' or 'input'), then save it in input.txt format.
@@ -240,7 +245,7 @@ To use  it properly, it is also  a good  idea  to install “dos2unix”.  dos2u
  5. Run the following command to execute the ClouderaSparkSetup.sh script: sh ClouderaSparkSetup.sh **Datalake Directory** **Master Node FQDN** **inputfile.txt** **Datalake Endpoint for the testdrive**
 **Note**: Replace the above values from **NodeDetails** and give the Name of the input file that you have just uploaded in Hue in the place of **inputfile.txt**.
 **Example:** 
-sh ClouderaSparkSetup.sh demotdah6k cdmstr-6ce17224.eastus.cloudapp.azure.com  inputfile.txt adl://cddatalakeah6k.azuredatalakestore
+sh ClouderaSparkSetup.sh demotdah6k cdmstr-6ce17224.eastus.cloudapp.azure.com  inputfile.txt adl://cddatalakeah6k.azuredatalakestore.
 ![](Images/apache-clouderaspark-setup-execute.png "")
   
 6. By executing the above script, the data has been stored to ADLS using Spark application.
@@ -280,8 +285,7 @@ Now we will create a Hive table from the output of the Spark application stored 
 create external table **tablename** (character varchar(1), frequency varchar(10)) row format delimited fields terminated by ',' lines
 terminated by '\n' stored as textfile location "**Output Data files on Datalake for the testdrive**";
   
-**Note:** Add any name for **tablename** and replace the **Output Data files on Datalake for the testdrive** placeholder with the corresponding data from the **NodeDetails** file.
-  
+**Note:** Add any name for **tablename** and replace the **Output Data files on Datalake for the testdrive** placeholder with the corresponding data from the **NodeDetails** file.  
 ![](Images/hive-queryeditor.png "")
 
 3. View the table by giving the query:
@@ -298,7 +302,7 @@ Impala  is  an  open  source,  massively  parallel  processing  query  engine  o
 ![](Images/impala-queryeditor.png "")
 
 3. Execute the below query in the default database to sync the data from Hive to Impala:
-    **INVALIDATE METADATA;**
+    **INVALIDATE METADATA;**   
 ![](Images/impala-query2.png "")
  
 4. View the table by giving the query:
@@ -313,6 +317,7 @@ Impala  is  an  open  source,  massively  parallel  processing  query  engine  o
 ### 4.1: Integrating with Data Lake Store ###
 1. Launch Power BI Desktop on your computer.
 2. From the Home ribbon, click Get Data, and then click More. In the Get Data dialog box, click Azure, click Azure Data Lake Store, and then click Connect.
+
 ![](Images/powerBI-desktop.png "")
 
 3. In the Microsoft Azure Data Lake Store dialog box, provide the URL to your Data Lake Store account, and then click OK.
@@ -332,7 +337,9 @@ After you have successfully signed in, click **Connect**.
 7. However, to visualize and analyze the data, you might prefer the data be available as per your requirements. To do so, follow the steps below:
 
 8. Select Edit Query from the top menu bar:
+
 ![](Images/PowerBI-edit-queryeditor.png "")
+
 Under the content column, right click on Table and select Add as New Query, you will see a new query added in the queries column:
 ![](Images/PowerBI-add-newQuery.png "")
 
@@ -342,6 +349,7 @@ Under the content column, right click on Table and select Add as New Query, you 
 ![](Images/PowerBI-create-new-query.png "")
 
 10. Right click and create a new query to get the data from the table as shown below:
+
 ![](Images/PowerBI-csv-files.png "")
 
 11. You will see a file icon that represents the file that you uploaded. Right-click the file, and click CSV.
@@ -366,6 +374,7 @@ a) From the Visualizations tab, click the symbol for a pie chart (see below).
 ![](Images/PowerBI-visualisations.png "")
 
 b)Drag the columns that you want to use and represent in your pie-chart from the Fields tab to Visualizations tab, as shown below:
+
 ![](Images/PowerBI-fields-visualizations.png "")
 
 16. From the file menu, click Save to save the visualization as a Power BI Desktop file.
@@ -373,10 +382,12 @@ b)Drag the columns that you want to use and represent in your pie-chart from the
 <a name="4.2"></a>
 ### 4.2: Integrating with Impala ###
 1. Go to point 7 of section 4.7, where you ran a query from the table created using the output from ADLS copied to local HDFS.
+
 ![](Images/Cloudera-ADLS-HDFS.png "")
 
 2. Click the Export Results button in the Hue Impala UI, as seen in the above screenshot, to download the output as a CSV file.
 3. From the Home ribbon in Power BI, click Get Data, and then click More. In  the Get Data dialog box, click File, click Text/CSV,and then click Connect.
+
 ![](Images/PowerBI-getdata.png "")
 
 4. Select the CSV file exported from Impala in Step 2 and click on Open.
@@ -385,6 +396,7 @@ b)Drag the columns that you want to use and represent in your pie-chart from the
 5. Click on Load.
 6. Select the Data button to visualize the content.
 ![](Images/PowerBI-load-selectdata.png "")
+
 You have successfully visualized the content exported from impala using powerBI.
 
 <a name="Module-5"></a>
@@ -395,19 +407,24 @@ You may need to restart Cloudera Management Service for the below errors:
 ### Errors:
 * Request to the Service Monitor failed. This may cause slow page responses.View the status of the Service Monitor.
 * Request to the Host Monitor failed. This may cause slow page responses.View the status of the Host Monitor.
+
 ![](Images/Cloudera-cloudera-manager-page.png "")
 
 1. Go to http:// **Manager Node FQDN**:7180/cmf/home.
 2. Go to Cloudera Management Service and select MGMT.
+
 ![](Images/Cloudera-mgmtservice.png "")
   
 3. Click on the drop down menu and select Restart.
+
 ![](Images/Cloudera-click-restart.png "")
 
 4. Confirm by clicking the Restart button.
+
 ![](Images/Cloudera-click-confirm.png "")
 
 5. Click on Close to complete the process.
+
 ![](Images/Cloudera-click-close.png "")
 
 **Note:** If you performed this restart in response to errors, please now re-run section 4.3 after performing the above steps.
