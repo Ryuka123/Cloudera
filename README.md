@@ -339,6 +339,99 @@ Under the content column, right click on Table and select Add as New Query, you 
 
 <img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/PowerBI-files3.png"/>
 
+12. Your data is now available in a format that you can use to create visualizations.
+13. From the Home ribbon, click Close and Apply, and then click Close and Apply.
+<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/PowerBI-click-close%26apply.png"/>
+
+14. Once the query is updated, the Fields tab will show the new fields available for visualization.
+<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/PowerBI-update-query.png"/>
+
+15. You can create a pie chart to represent your data. To do so, make the following selections.
+a) From the Visualizations tab, click the symbol for a pie chart (see below).
+<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/PowerBI-visualisations.png"/>
+
+b)Drag the columns that you want to use and represent in your pie-chart from the Fields tab to Visualizations tab, as shown below:
+<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/PowerBI-fields-visualizations.png"/>
+
+16. From the file menu, click Save to save the visualization as a Power BI Desktop file.
+
+### 4.2: Integrating with Impala
+1. Go to point 7 of section 4.7, where you ran a query from the table created using the output from ADLS copied to local HDFS.
+<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/Cloudera-ADLS-HDFS.png"/>
+
+2. Click the Export Results button in the Hue Impala UI, as seen in the above screenshot, to download the output as a CSV file.
+3. From the Home ribbon in Power BI, click Get Data, and then click More. In  the Get Data dialog box, click File, click Text/CSV,and then click Connect.
+<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/PowerBI-getdata.png"/>
+
+4. Select the CSV file exported from Impala in Step 2 and click on Open.
+<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/PowerBI-click-open.png"/>
+
+5. Click on Load.
+6. Select the Data button to visualize the content.
+<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/PowerBI-load-selectdata.png"/>
+You have successfully visualized the content exported from impala using powerBI.
+
+### Reference
+### 5.1: Restart Cloudera Management Service
+You may need to restart Cloudera Management Service for the below errors:
+### Errors:
+* Request to the Service Monitor failed. This may cause slow page responses.View the status of the Service Monitor.
+* Request to the Host Monitor failed. This may cause slow page responses.View the status of the Host Monitor.
+<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/Cloudera-cloudera-manager-page.png"/>
+
+1. Go to http://<Manager Node FQDN>:7180/cmf/home.
+2. Go to Cloudera Management Service and select MGMT.
+  <img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/Cloudera-mgmtservice.png"/>
+  
+3. Click on the drop down menu and select Restart.
+<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/Cloudera-click-restart.png"/>
+
+4. Confirm by clicking the Restart button.
+<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/Cloudera-click-confirm.png"/>
+
+5. Click on Close to complete the process.
+<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/Cloudera-click-close.png"/>
+
+**Note:** If you performed this restart in response to errors, please now re-run section 4.3 after performing the above steps.
+
+### 5.2: Error Messages While Running the Spark Job
+1. You may see a few errors popping up while executing the Spark job that can safely be ignored, such as the ones below.
+**Note:** The permissions get properly set in the .sh file.
+sh ClouderaSparkSetup.sh demotdweti 10.3.0.6 mkdir: Permission denied: user=cloudera,access=WRITE, inode="/":hdfs:supergroup:drwxr-xr-x --2017-07-11 16:55:54--https://aztdrepo.blob.core.windows.net/clouderadirector/wordcount.jar
+Resolving aztdrepo.blob.core.windows.net... 52.238.56.168
+Connecting to aztdrepo.blob.core.windows.net |52.238.56.168|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 6371588 (6.1M) [application/octet-stream]
+Saving to  “/home/cloudera/wordcount jar”
+
+2. Searching for Cloudera Navigator – this error can safely be ignored.
+INFO scheduler.DAGScheduler: Job 1 finished: saveAsTextFile at SparkWordCount.scala:32, took 1.811055 s
+INFO spark.SparkContext: Invoking stop() from shutdown hook
+ERROR scheduler.LiveListenerBus: Listener ClouderaNavigatorListener threw an exception
+java.io.FileNotFoundException: Lineage is enabled but lineage directory /var/log/spark/lineage doesn't exist at com.cloudera.spark.lineage.ClouderaNavigatorListener.checkLineageEnabled(ClouderaNavigatorListener.scala:122) at com.cloudera.spark.lineage
+
+**Note:** You may refer to the Spark section of the Cloudera release notes for further details (link below).
+
+https://www.cloudera.com/documentation/enterprise/releasenotes/topics/cn_rn_known_issues.html
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
 
  
 
