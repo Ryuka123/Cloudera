@@ -5,7 +5,7 @@
 
 
 <!-- TOC -->
-## Table of Contents
+### Table of Contents
 1. [Module 1: About Cloudera](#Module-1)
   - [1.1: Cloudera Director](#1.1)
   - [1.2: Cloudera Manager](#1.2)
@@ -26,7 +26,7 @@
   - [5.2: Error Messages While Running the Spark Job](#5.2)
 <!-- /TOC -->
 
-### About Cloudera
+### Module 1:About Cloudera
 Cloudera is an open-source Apache Hadoop distribution, CDH (Cloudera Distribution Including
 Apache Hadoop) targets enterprise-class deployments of that technology.
 Cloudera provides a scalable, flexible, integrated platform that makes it easy to manage rapidly
@@ -44,7 +44,7 @@ that handles installation and updates on a cluster in few clicks.
 Cloudera  also  develop  their  own  projects  such  as  Impala  or  Kudu  that  improve  hadoop
 integration and responsiveness in the industry.
 
-## Cloudera Director
+### 1.1: Cloudera Director
 Cloudera Director enables reliable self-service for using CDH and Cloudera Enterprise Data
 Hub in the cloud.
 
@@ -62,7 +62,7 @@ Cloudera  Manager  instances  and  CDH clusters,  with  multiple  users and user
 server  works  well  for  launching  and  managing  large  numbers  of  clusters  in  a  production
 environment.
 
-## Cloudera Manager
+### 1.2: Cloudera Manager
 Cloudera  Manager  is  a  sophisticated  application  used  to  deploy,  manage,  monitor,  and
 diagnose issues with your CDH deployments. Cloudera Manager provides the Admin Console,
 a  web-based  user  interface  that  makes  administration  of your  enterprise  data  simple  and
@@ -71,7 +71,7 @@ cluster health information and metrics, as well as configure Cloudera Manager.
 
 <img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/cloudera-manager.png"/>
 
-# 2. Objective
+### Module 2: Objective
 NOTE: As this test drive provides access to the full Cloudera Director platform, deployment can
 sometimes take up to 45 minutes. While you wait, please feel free to review to helpful content
 in this manual and on [Cloudera’s Azure Marketplace product page](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/cloudera.clouderaedh), or on the Cloudera website.
@@ -93,8 +93,8 @@ ADLS, processed by Spark.
 <img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/cloudera-lab-dataflow.png"/>
 
 
-# 3. Getting Started
-## Accessing Cloudera Backend cluster details
+### Module 3: Getting Started
+### 3.1: Accessing Cloudera Backend cluster details
 
 Please login to the Azure portal and go to the Cloudera Director HOL Azure resource group
 allocated to you. Copy the DNS URLs for the Cloudera Director,Manager and Master nodes.
@@ -136,7 +136,7 @@ cat NodeDetails
 The  NodeDetails  file  contains  Node  and  URI  details  used  by  the  Cloudera  test  drive environment.These are gathered using a script which pulls required data using the API calls.
 <img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/cloudera-node-details.png"/>
 
-## Accessing Cloudera Manager from Cloudera Director Web UI
+### 3.2: Accessing Cloudera Manager from Cloudera Director Web UI
 After deploying a cluster, you can manage it using Cloudera Manager.
 
 1. Access the Cloudera Director Web UI using the Cloudera Director Access URL provided in the Access Information. Enter it into a web browser.
@@ -180,7 +180,7 @@ Note:The next step is to Restart Stale Services. We must do this to get the Azur
 
 Note: Please visit section in the Reference section later in this guide for additional details and help for any error messages you may encounter.
 
-## Hue
+### 3.3: Hue
 Hue is a set of web applications that enable you to interact with a CDH cluster. Hue applications let you browse HDFS and manage a Hive metastore. They also let you run Hive and Cloudera Impala queries, HBase and Sqoop commands, Pig scripts, MapReduce jobs, and Oozie workflows.
 
 1. Copy the Cloudera Hue Web URL using the cloudera master DNS server url with port 8888 as shown in below example and paste it in browser – which opens the Hue console.
