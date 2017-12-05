@@ -7,7 +7,7 @@
 <!-- TOC -->
 ## Contents
 1. [About Cloudera](#about-cloudera)
-  * [Cloudera Director](#cloudera-director)
+  -[1.1: Cloudera Director](#1.1)
   * [Cloudera Manager](#cloudera-manager)
 2. [Objective](#objective)  
 3. [Getting Started](#getting-started)
