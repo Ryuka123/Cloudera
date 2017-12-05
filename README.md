@@ -128,8 +128,7 @@ Click on the Cloudera Master virtual machine to get the DNS name. (See below).
 
 You must also access the Cloudera backend cluster details to get the  Node Details. This is
 explained below.
-1. Log in to the Cloudera Director VM using the Cloudera Director FQDN address gathered  from  the previous steps, and use an SSH tool like PuTTY (or Terminal on Mac), which we’ll refer to in this walkthrough.[(Download PuTTY here)](https://putty.en.softonic.com/).
-E.g. cldrhyic.eastus.cloudapp.azure.com
+1. Log in to the Cloudera Director VM using the Cloudera Director FQDN address gathered  from  the previous steps, and use an SSH tool like PuTTY (or Terminal on Mac), which we’ll refer to in this walkthrough.[(Download PuTTY here)](https://putty.en.softonic.com/).E.g. cldrhyic.eastus.cloudapp.azure.com
  ![](Images/Clouder-putty.png "")
 
 2. Once connected, login to the Cloudera Director VM using the Director Username and then the Director Password from the provided test drive access credentials.
@@ -354,13 +353,16 @@ Under the content column, right click on Table and select Add as New Query, you 
 
 12. Your data is now available in a format that you can use to create visualizations.
 13. From the Home ribbon, click Close and Apply, and then click Close and Apply.
+
 ![](Images/PowerBI-click-close%26apply.png "")
 
 14. Once the query is updated, the Fields tab will show the new fields available for visualization.
+
 ![](Images/PowerBI-update-query.png "")
 
 15. You can create a pie chart to represent your data. To do so, make the following selections.
 a) From the Visualizations tab, click the symbol for a pie chart (see below).
+
 ![](Images/PowerBI-visualisations.png "")
 
 b)Drag the columns that you want to use and represent in your pie-chart from the Fields tab to Visualizations tab, as shown below:
