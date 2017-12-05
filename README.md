@@ -251,14 +251,71 @@ Next, navigate to the Yarn/Spark UI to see the WordCount Spark job.
 Each job has Summary and Detail information. A job Summary includes the following attributes: **start & end timestamps,query name (if the job is part of a Hive  query),queue,job type,job ID, and user**.
 
 4. You can also see the available applications by navigating to the Spark UI:
-  1. Go to http://**<Manager Node private FQDN>**:7180/cmf/home
-     **Example: http://cdedge-4f171cc5.eastus.cloudapp.azure.com:7180**
-  2. Click on **SPARK_ON_YARN-1** (May appear as 'SPARK_ON....')
+ Go to http://**<Manager Node private FQDN>**:7180/cmf/home
+ **Example: http://cdedge-4f171cc5.eastus.cloudapp.azure.com:7180**
+5. Click on **SPARK_ON_YARN-1** (May appear as 'SPARK_ON....')
 <img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/apache-click-spark-on-yarn.png"/>
   
-  3. Navigate to the History Server WEB UI by going to http://<Master FQDN>:18088
-     **Example: http://:18088/cdedge-4f171cc5.eastus.cloudapp.azure.com:18088/**
-  <img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/apache-historyserver.png"/>
+6. Navigate to the History Server WEB UI by going to http://<Master FQDN>:18088
+   **Example: http://:18088/cdedge-4f171cc5.eastus.cloudapp.azure.com:18088/**
+<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/apache-historyserver.png"/>
+
+**Note:** Please visit section 5.2 in the Reference section for additional details and help for any error messages you may encounter.
+
+### 3.6 Hive
+Apache Hive is a data warehouse software project built on top of Apache Hadoop for providing data summarization, query, and analysis. Hive gives a SQL-like interface to query data stored in various databases and file systems that integrate with Hadoop. 
+Now we will create a Hive table from the output of the Spark application stored on ADLS and run a Hive query from Hue.
+
+1. Navigate to the **Query Editors** drop-down menu in the Hue WEB UI and click on Hive.
+2. In the default database, execute the below query:
+create external table <tablename> (character varchar(1), frequency varchar(10)) row format delimited fields terminated by ',' lines
+terminated by '\n' stored as textfile location "<Output Data files on Datalake for the testdrive>";
+  
+**Note:** Add any name for **<tablename>** and replace the **<Output Data files on Datalake for the testdrive>** placeholder with the corresponding data from the **NodeDetails** file.
+  
+<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/hive-queryeditor.png"/>
+
+3. View the table by giving the query:
+**Select * from <tablename>**
+<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/hive-query2.png"/>
+
+### 3.7 Impala
+Impala  is  an  open  source,  massively  parallel  processing  query  engine  on  top  of  clustered systems like Apache  Hadoop.  It  is an interactive SQL  like  query  engine that runs on top of Hadoop Distributed File System (HDFS). It integrates with HIVE metastore to share the table information between both the components.
+
+1. **Note:** Impala now integrates with ADLS from version CDH 5.12.
+
+2. Navigate to the Query Editor drop-down menu and click on Impala.
+<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/impala-queryeditor.png"/>
+
+3. Execute the below query in the default database to sync the data from Hive to Impala:
+    **INVALIDATE METADATA;**
+    <img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/impala-query2.png"/>
+ 
+4. View the table by giving the query:
+**Select * from <tablename>**
+ <img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/impala-query3.png"/>
+  
+5. You have now successfully run the Impala query using Hue!
+
+  
+
+  
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
   
   
 
