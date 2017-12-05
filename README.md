@@ -130,7 +130,7 @@ You must also access the Cloudera backend cluster details to get the  Node Detai
 explained below.
 1. Log in to the Cloudera Director VM using the Cloudera Director FQDN address gathered  from  the previous steps, and use an SSH tool like PuTTY (or Terminal on Mac), which we’ll refer to in this walkthrough.[(Download PuTTY here)](https://putty.en.softonic.com/).
 E.g. cldrhyic.eastus.cloudapp.azure.com
-![](Images/Clouder-putty.png "")
+ ![](Images/Clouder-putty.png "")
 
 2. Once connected, login to the Cloudera Director VM using the Director Username and then the Director Password from the provided test drive access credentials.
 (Note:Passwords are hidden when typed or pasted in Linux terminals)
