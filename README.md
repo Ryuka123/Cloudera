@@ -223,7 +223,7 @@ Spark is the open standard for flexible in-memory data processing that enables b
 To use  it properly, it is also  a good  idea  to install “dos2unix”.  dos2unix is  a program  that converts DOS to UNIX text file format, ensuring everything will run in a Linux environment.
 
 1. **Login** to the Master VM by typing in the below command in the open terminal session from before (copy/paste may not work):ssh – i     sshKeyForAzureVM cloudera@**Master Node FQDN**
- ![](Images/Apache-login-mastervm.png "")
+![](Images/Apache-login-mastervm.png "")
   
 2. **Download** the following script file using the below command.The script contains the spark app (WordCount). The application counts the number of occurrences of each letter in words which have more characters than a given threshold.
 **wget** https://raw.githubusercontent.com/sysgain/cloudera-spectra-vip/master/scripts/ClouderaSparkSetup.sh
@@ -236,7 +236,7 @@ To use  it properly, it is also  a good  idea  to install “dos2unix”.  dos2u
 4. To give permissions to ClouderaSparkSetup.sh file, run the following commands:
 **dos2unix /home/cloudera/ClouderaSparkSetup.**
 **chmod 755 /home/cloudera/ClouderaSparkSetup.sh**
- ![](Images/apache-permissions.png "")
+![](Images/apache-permissions.png "")
  
  5. Run the following command to execute the ClouderaSparkSetup.sh script: sh ClouderaSparkSetup.sh **Datalake Directory** **Master Node FQDN** **inputfile.txt** **Datalake Endpoint for the testdrive**
 **Note**: Replace the above values from **NodeDetails** and give the Name of the input file that you have just uploaded in Hue in the place of **inputfile.txt**.
@@ -253,7 +253,7 @@ Next, navigate to the Yarn/Spark UI to see the WordCount Spark job.
 1. Go to http:// **Manager Node FQDN**:7180/cmf/home
 **Example: http://cdedge-4f171cc5.eastus.cloudapp.azure.com:7180**
 2. Click on **YARN-1**.
- ![](Images/apache-click-yarn1.png "")
+![](Images/apache-click-yarn1.png "")
   
 3. Click on the Applications tab in the top navigation menu to view the available jobs.
 ![](Images/apache-click-applications.png "")
@@ -300,11 +300,11 @@ Impala  is  an  open  source,  massively  parallel  processing  query  engine  o
 
 3. Execute the below query in the default database to sync the data from Hive to Impala:
     **INVALIDATE METADATA;**
-    ![](Images/impala-query2.png "")
+![](Images/impala-query2.png "")
  
 4. View the table by giving the query:
 **Select * from tablename**
- ![](Images/impala-query3.png "")
+![](Images/impala-query3.png "")
   
 5. You have now successfully run the Impala query using Hue!
 
@@ -397,7 +397,7 @@ You may need to restart Cloudera Management Service for the below errors:
 
 1. Go to http:// **Manager Node FQDN**:7180/cmf/home.
 2. Go to Cloudera Management Service and select MGMT.
-  ![](Images/Cloudera-mgmtservice.png "")
+![](Images/Cloudera-mgmtservice.png "")
   
 3. Click on the drop down menu and select Restart.
 ![](Images/Cloudera-click-restart.png "")
