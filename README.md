@@ -214,7 +214,7 @@ Note: Please ensure the inputfile is uploaded to the path /user/admin (see below
 Spark is the open standard for flexible in-memory data processing that enables batch, realtime,and advanced analytics on the Apache Hadoop platform.
 To use  it properly, it is also  a good  idea  to install “dos2unix”.  dos2unix is  a program  that converts DOS to UNIX text file format, ensuring everything will run in a Linux environment.
 
-1. **Login** to the Master VM by typing in the below command in the open terminal session from before (copy/paste may not work):ssh – i     sshKeyForAzureVM cloudera@<Master Node FQDN>
+1. **Login** to the Master VM by typing in the below command in the open terminal session from before (copy/paste may not work):ssh – i     sshKeyForAzureVM cloudera@**Master Node FQDN**
  <img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/Apache-login-mastervm.png"/>
   
 2. **Download** the following script file using the below command.The script contains the spark app (WordCount). The application counts the number of occurrences of each letter in words which have more characters than a given threshold.
@@ -230,8 +230,8 @@ To use  it properly, it is also  a good  idea  to install “dos2unix”.  dos2u
 **chmod 755 /home/cloudera/ClouderaSparkSetup.sh**
  <img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/apache-permissions.png"/>
  
- 5. Run the following command to execute the ClouderaSparkSetup.sh script: sh ClouderaSparkSetup.sh <Datalake Directory> <Master Node FQDN> <inputfile.txt> <Datalake Endpoint for the testdrive>
-**Note**: Replace the above values from **NodeDetails** and give the Name of the input file that you have just uploaded in Hue in the place of <inputfile.txt>.
+ 5. Run the following command to execute the ClouderaSparkSetup.sh script: sh ClouderaSparkSetup.sh **Datalake Directory** **Master Node FQDN** **inputfile.txt** **Datalake Endpoint for the testdrive**
+**Note**: Replace the above values from **NodeDetails** and give the Name of the input file that you have just uploaded in Hue in the place of **inputfile.txt**.
 **Example:** 
 sh ClouderaSparkSetup.sh demotdah6k cdmstr-6ce17224.eastus.cloudapp.azure.com  inputfile.txt adl://cddatalakeah6k.azuredatalakestore
 <img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/apache-clouderaspark-setup-execute.png"/>
@@ -241,7 +241,7 @@ sh ClouderaSparkSetup.sh demotdah6k cdmstr-6ce17224.eastus.cloudapp.azure.com  i
 
 ### 3.5: Viewing Jobs in UI
 Next, navigate to the Yarn/Spark UI to see the WordCount Spark job.
-1. Go to http:// **<Manager Node FQDN>**:7180/cmf/home
+1. Go to http:// **Manager Node FQDN**:7180/cmf/home
 **Example: http://cdedge-4f171cc5.eastus.cloudapp.azure.com:7180**
 2. Click on **YARN-1**.
  <img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/apache-click-yarn1.png"/>
@@ -251,12 +251,12 @@ Next, navigate to the Yarn/Spark UI to see the WordCount Spark job.
 Each job has Summary and Detail information. A job Summary includes the following attributes: start & end timestamps,query name (if the job is part of a Hive  query),queue,job type,job ID, and user.
 
 4. You can also see the available applications by navigating to the Spark UI:
- Go to http://**<Manager Node private FQDN>**:7180/cmf/home
+ Go to http:// **Manager Node private FQDN**:7180/cmf/home
  **Example: http://cdedge-4f171cc5.eastus.cloudapp.azure.com:7180**
 5. Click on **SPARK_ON_YARN-1** (May appear as 'SPARK_ON....')
 <img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/apache-click-spark-on-yarn.png"/>
   
-6. Navigate to the History Server WEB UI by going to http://<Master FQDN>:18088
+6. Navigate to the History Server WEB UI by going to http:// **Master FQDN**:18088
    **Example: http://:18088/cdedge-4f171cc5.eastus.cloudapp.azure.com:18088/**
 <img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/apache-historyserver.png"/>
 
@@ -268,10 +268,10 @@ Now we will create a Hive table from the output of the Spark application stored 
 
 1. Navigate to the **Query Editors** drop-down menu in the Hue WEB UI and click on Hive.
 2. In the default database, execute the below query:
-create external table <tablename> (character varchar(1), frequency varchar(10)) row format delimited fields terminated by ',' lines
-terminated by '\n' stored as textfile location "<Output Data files on Datalake for the testdrive>";
+create external table **tablename** (character varchar(1), frequency varchar(10)) row format delimited fields terminated by ',' lines
+terminated by '\n' stored as textfile location "**Output Data files on Datalake for the testdrive**";
   
-**Note:** Add any name for **<tablename>** and replace the **<Output Data files on Datalake for the testdrive>** placeholder with the corresponding data from the **NodeDetails** file.
+**Note:** Add any name for **tablename** and replace the **Output Data files on Datalake for the testdrive** placeholder with the corresponding data from the **NodeDetails** file.
   
 <img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/hive-queryeditor.png"/>
 
@@ -297,7 +297,7 @@ Impala  is  an  open  source,  massively  parallel  processing  query  engine  o
   
 5. You have now successfully run the Impala query using Hue!
 
-### Power BI integration with Data Lake Store and Impala (Optional)
+### Module 4: Power BI integration with Data Lake Store and Impala (Optional)
 ### 4.1: Integrating with Data Lake Store
 1. Launch Power BI Desktop on your computer.
 2. From the Home ribbon, click Get Data, and then click More. In the Get Data dialog box, click Azure, click Azure Data Lake Store, and then click Connect.
@@ -371,7 +371,7 @@ b)Drag the columns that you want to use and represent in your pie-chart from the
 <img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/PowerBI-load-selectdata.png"/>
 You have successfully visualized the content exported from impala using powerBI.
 
-### Reference
+### Module 5: Reference
 ### 5.1: Restart Cloudera Management Service
 You may need to restart Cloudera Management Service for the below errors:
 ### Errors:
@@ -379,7 +379,7 @@ You may need to restart Cloudera Management Service for the below errors:
 * Request to the Host Monitor failed. This may cause slow page responses.View the status of the Host Monitor.
 <img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/Cloudera-cloudera-manager-page.png"/>
 
-1. Go to http://<Manager Node FQDN>:7180/cmf/home.
+1. Go to http:// **Manager Node FQDN**:7180/cmf/home.
 2. Go to Cloudera Management Service and select MGMT.
   <img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/Cloudera-mgmtservice.png"/>
   
