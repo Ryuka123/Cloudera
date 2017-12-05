@@ -1,5 +1,6 @@
 ![](Images/Cloudera-logo-image.png "")
 
+
 ![](Images/cloudera-microsoftAzure.png "")
 
 
@@ -243,21 +244,21 @@ Next, navigate to the Yarn/Spark UI to see the WordCount Spark job.
 1. Go to http:// **Manager Node FQDN**:7180/cmf/home
 **Example: http://cdedge-4f171cc5.eastus.cloudapp.azure.com:7180**
 2. Click on **YARN-1**.
- <img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/apache-click-yarn1.png"/>
+ ![](Images/apache-click-yarn1.png "")
   
 3. Click on the Applications tab in the top navigation menu to view the available jobs.
-<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/apache-click-applications.png"/>
+![](Images/apache-click-applications.png "")
 Each job has Summary and Detail information. A job Summary includes the following attributes: start & end timestamps,query name (if the job is part of a Hive  query),queue,job type,job ID, and user.
 
 4. You can also see the available applications by navigating to the Spark UI:
  Go to http:// **Manager Node private FQDN**:7180/cmf/home
  **Example: http://cdedge-4f171cc5.eastus.cloudapp.azure.com:7180**
 5. Click on **SPARK_ON_YARN-1** (May appear as 'SPARK_ON....')
-<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/apache-click-spark-on-yarn.png"/>
+![](Images/apache-click-spark-on-yarn.png "")
   
 6. Navigate to the History Server WEB UI by going to http:// **Master FQDN**:18088
    **Example: http://:18088/cdedge-4f171cc5.eastus.cloudapp.azure.com:18088/**
-<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/apache-historyserver.png"/>
+![](Images/apache-historyserver.png "")
 
 **Note:** Please visit section 5.2 in the Reference section for additional details and help for any error messages you may encounter.
 
@@ -272,11 +273,11 @@ terminated by '\n' stored as textfile location "**Output Data files on Datalake 
   
 **Note:** Add any name for **tablename** and replace the **Output Data files on Datalake for the testdrive** placeholder with the corresponding data from the **NodeDetails** file.
   
-<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/hive-queryeditor.png"/>
+![](Images/hive-queryeditor.png "")
 
 3. View the table by giving the query:
 **Select * from tablename**
-<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/hive-query2.png"/>
+![](Images/hive-query2.png "")
 
 ### 3.7 Impala
 Impala  is  an  open  source,  massively  parallel  processing  query  engine  on  top  of  clustered systems like Apache  Hadoop.  It  is an interactive SQL  like  query  engine that runs on top of Hadoop Distributed File System (HDFS). It integrates with HIVE metastore to share the table information between both the components.
@@ -284,15 +285,15 @@ Impala  is  an  open  source,  massively  parallel  processing  query  engine  o
 1. **Note:** Impala now integrates with ADLS from version CDH 5.12.
 
 2. Navigate to the Query Editor drop-down menu and click on Impala.
-<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/impala-queryeditor.png"/>
+![](Images/impala-queryeditor.png "")
 
 3. Execute the below query in the default database to sync the data from Hive to Impala:
     **INVALIDATE METADATA;**
-    <img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/impala-query2.png"/>
+    ![](Images/impala-query2.png "")
  
 4. View the table by giving the query:
 **Select * from tablename**
- <img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/impala-query3.png"/>
+ ![](Images/impala-query3.png "")
   
 5. You have now successfully run the Impala query using Hue!
 
@@ -300,74 +301,74 @@ Impala  is  an  open  source,  massively  parallel  processing  query  engine  o
 ### 4.1: Integrating with Data Lake Store
 1. Launch Power BI Desktop on your computer.
 2. From the Home ribbon, click Get Data, and then click More. In the Get Data dialog box, click Azure, click Azure Data Lake Store, and then click Connect.
-<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/powerBI-desktop.png"/>
+![](Images/powerBI-desktop.png "")
 
 3. In the Microsoft Azure Data Lake Store dialog box, provide the URL to your Data Lake Store account, and then click OK.
 **Note:** Get the **URL** - Datalake Endpoint from the NodeDetails file. (Refer to section4.1).
-<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/PowerBI-datalake-account.png"/>
+![](Images/PowerBI-datalake-account.png "")
 
 4. In the next dialog box, click **Sign in** to sign into Data Lake Store account. You will be redirected to your organization's sign in page.Follow the prompts to sign into the account.
 After you have successfully signed in, click **Connect**.
-<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/PowerBI-click-on-connect.png"/>
+![](Images/PowerBI-click-on-connect.png "")
 
 5. The next dialog box shows the file that you uploaded to your Data Lake Store account.Verify the info and then click Load.
-<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/PowerBI-see-fields.png"/>
+![](Images/PowerBI-see-fields.png "")
 
 6. After the data has been successfully loaded into Power BI, you will see the available fields in the Fields tab.
-<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/PowerBI-fields.png"/>
+![](Images/PowerBI-fields.png "")
 
 7. However, to visualize and analyze the data, you might prefer the data be available as per your requirements. To do so, follow the steps below:
 
 8. Select Edit Query from the top menu bar:
-<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/PowerBI-edit-queryeditor.png"/>
+![](Images/PowerBI-edit-queryeditor.png "")
 Under the content column, right click on Table and select Add as New Query, you will see a new query added in the queries column:
-<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/PowerBI-add-newQuery.png"/>
+![](Images/PowerBI-add-newQuery.png "")
 
-<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/PowerBI-newQuery2.png"/>
+![](Images/PowerBI-newQuery2.png "")
 
 9. Once again, right click and select Add as New Query to convert the table content to binary form.
-<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/PowerBI-create-new-query.png"/>
+![](Images/PowerBI-create-new-query.png "")
 
 10. Right click and create a new query to get the data from the table as shown below:
-<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/PowerBI-csv-files.png"/>
+![](Images/PowerBI-csv-files.png "")
 
 11. You will see a file icon that represents the file that you uploaded. Right-click the file, and click CSV.
-<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/PowerBI-file1.png"/>
+![](Images/PowerBI-file1.png "")
 
-<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/PowerBI-files2.png"/>
+![](Images/PowerBI-files2.png "")
 
-<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/PowerBI-files3.png"/>
+![](Images/PowerBI-files3.png "")
 
 12. Your data is now available in a format that you can use to create visualizations.
 13. From the Home ribbon, click Close and Apply, and then click Close and Apply.
-<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/PowerBI-click-close%26apply.png"/>
+![](Images/PowerBI-click-close%26apply.png "")
 
 14. Once the query is updated, the Fields tab will show the new fields available for visualization.
-<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/PowerBI-update-query.png"/>
+![](Images/PowerBI-update-query.png "")
 
 15. You can create a pie chart to represent your data. To do so, make the following selections.
 a) From the Visualizations tab, click the symbol for a pie chart (see below).
-<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/PowerBI-visualisations.png"/>
+![](Images/PowerBI-visualisations.png "")
 
 b)Drag the columns that you want to use and represent in your pie-chart from the Fields tab to Visualizations tab, as shown below:
-<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/PowerBI-fields-visualizations.png"/>
+![](Images/PowerBI-fields-visualizations.png "")
 
 16. From the file menu, click Save to save the visualization as a Power BI Desktop file.
 
 ### 4.2: Integrating with Impala
 1. Go to point 7 of section 4.7, where you ran a query from the table created using the output from ADLS copied to local HDFS.
-<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/Cloudera-ADLS-HDFS.png"/>
+![](Images/Cloudera-ADLS-HDFS.png "")
 
 2. Click the Export Results button in the Hue Impala UI, as seen in the above screenshot, to download the output as a CSV file.
 3. From the Home ribbon in Power BI, click Get Data, and then click More. In  the Get Data dialog box, click File, click Text/CSV,and then click Connect.
-<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/PowerBI-getdata.png"/>
+![](Images/PowerBI-getdata.png "")
 
 4. Select the CSV file exported from Impala in Step 2 and click on Open.
-<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/PowerBI-click-open.png"/>
+![](Images/PowerBI-click-open.png "")
 
 5. Click on Load.
 6. Select the Data button to visualize the content.
-<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/PowerBI-load-selectdata.png"/>
+![](Images/PowerBI-load-selectdata.png "")
 You have successfully visualized the content exported from impala using powerBI.
 
 ### Module 5: Reference
@@ -376,20 +377,20 @@ You may need to restart Cloudera Management Service for the below errors:
 ### Errors:
 * Request to the Service Monitor failed. This may cause slow page responses.View the status of the Service Monitor.
 * Request to the Host Monitor failed. This may cause slow page responses.View the status of the Host Monitor.
-<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/Cloudera-cloudera-manager-page.png"/>
+![](Images/Cloudera-cloudera-manager-page.png "")
 
 1. Go to http:// **Manager Node FQDN**:7180/cmf/home.
 2. Go to Cloudera Management Service and select MGMT.
-  <img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/Cloudera-mgmtservice.png"/>
+  ![](Images/Cloudera-mgmtservice.png "")
   
 3. Click on the drop down menu and select Restart.
-<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/Cloudera-click-restart.png"/>
+![](Images/Cloudera-click-restart.png "")
 
 4. Confirm by clicking the Restart button.
-<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/Cloudera-click-confirm.png"/>
+![](Images/Cloudera-click-confirm.png "")
 
 5. Click on Close to complete the process.
-<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/Cloudera-click-close.png"/>
+![](Images/Cloudera-click-close.png "")
 
 **Note:** If you performed this restart in response to errors, please now re-run section 4.3 after performing the above steps.
 
