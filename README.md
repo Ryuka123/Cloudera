@@ -214,8 +214,35 @@ Note: Please ensure the inputfile is uploaded to the path /user/admin (see below
 Spark is the open standard for flexible in-memory data processing that enables batch, realtime,and advanced analytics on the Apache Hadoop platform.
 To use  it properly, it is also  a good  idea  to install “dos2unix”.  dos2unix is  a program  that converts DOS to UNIX text file format, ensuring everything will run in a Linux environment.
 
-1. Login to the Master VM by typing in the below command in the open terminal session from before (copy/paste may not work):ssh – i sshKeyForAzureVM cloudera@<Master Node FQDN>
-<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/Apache-login-mastervm.png"/>
+1. **Login** to the Master VM by typing in the below command in the open terminal session from before (copy/paste may not work):ssh – i     sshKeyForAzureVM cloudera@<Master Node FQDN>
+ <img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/Apache-login-mastervm.png"/>
+  
+2. **Download** the following script file using the below command.The script contains the spark app (WordCount). The application counts the number of occurrences of each letter in words which have more characters than a given threshold.
+**wget** https://raw.githubusercontent.com/sysgain/cloudera-spectra-vip/master/scripts/ClouderaSparkSetup.sh
+<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/apache-download-script.png"/>
+
+3. To install dos2unix, run the following command:
+**sudo yum install -y dos2unix**
+<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/apache-install-dos2unix.png"/>
+
+4. To give permissions to ClouderaSparkSetup.sh file, run the following commands:
+**dos2unix /home/cloudera/ClouderaSparkSetup.sh
+ chmod 755 /home/cloudera/ClouderaSparkSetup.sh**
+ <img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/apache-permissions.png"/>
+ 
+ 5. Run the following command to execute the ClouderaSparkSetup.sh script: sh ClouderaSparkSetup.sh <Datalake Directory> <Master Node FQDN> <inputfile.txt> <Datalake Endpoint for the testdrive>
+**Note**: Replace the above values from NodeDetails and give the Name of the input file that you have just uploaded in Hue in the place of <inputfile.txt>.
+Example: sh ClouderaSparkSetup.sh demotdah6k cdmstr-6ce17224.eastus.cloudapp.azure.com  inputfile.txt
+adl://cddatalakeah6k.azuredatalakestore
+
+
+ 
+
+
+
+
+  
+  
   
   
 
