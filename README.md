@@ -26,7 +26,7 @@
   - [5.2: Error Messages While Running the Spark Job](#5.2)
 <!-- /TOC -->
 
-### Module 1:About Cloudera
+### Module 1: About Cloudera
 Cloudera is an open-source Apache Hadoop distribution, CDH (Cloudera Distribution Including
 Apache Hadoop) targets enterprise-class deployments of that technology.
 Cloudera provides a scalable, flexible, integrated platform that makes it easy to manage rapidly
@@ -209,6 +209,11 @@ Note: Please ensure the inputfile is uploaded to the path /user/admin (see below
 <img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/clousera-hue-uploadfiles2.png"/>
 
 6. The .txt file is now uploaded to Hue. The Spark application will use this data as input and provide the output to ADLS.
+
+### 3.4: Apache Spark (Run Spark App)
+Spark is the open standard for flexible in-memory data processing that enables batch, realtime,and advanced analytics on the Apache Hadoop platform.
+To use  it properly, it is also  a good  idea  to install “dos2unix”.  dos2unix is  a program  that converts DOS to UNIX text file format, ensuring everything will run in a Linux environment
+
 
 
 
