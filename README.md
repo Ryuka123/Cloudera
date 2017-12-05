@@ -5,12 +5,12 @@
 
 
 <!-- TOC -->
-## Contents
-1. [About Cloudera](#about-cloudera)
+## Table of Contents
+1. [Module 1: About Cloudera](#Module-1)
   - [1.1: Cloudera Director](#1.1)
   - [1.2: Cloudera Manager](#1.2)
-2. [Objective](#objective)  
-3. [Getting Started](#getting-started)
+2. [Module 2: Objective](#Module-2)  
+3. [Module 3: Getting Started](#Module-3)
   - [3.1: Accessing Cloudera Backend cluster details](#3.1)
   - [3.2: Accessing Cloudera Manager from Cloudera Director Web UI](#3.2)
   - [3.3: Hue](#3.3)
@@ -18,10 +18,10 @@
   - [3.5: Viewing Jobs in UI](#3.5)
   - [3.6: Hive](#3.6)
   - [3.7: Impala](#3.3)
-4. [Power BI integration with Data Lake Store and Impala (Optional)](#power-BI-integration-with-Data-Lake-Store-and-Impala-(Optional))
+4. [Module 4: Power BI integration with Data Lake Store and Impala (Optional)](#Module-4)
   - [4.1: Integrating with Data Lake Store](#4.1)
   - [4.2: Integrating with Impala](#4.2)
-5. [Reference](#reference)
+5. [Module 5: Reference](#Module-5)
   - [5.1: Restart Cloudera Management Service](#5.1)
   - [5.2: Error Messages While Running the Spark Job](#5.2)
 <!-- /TOC -->
