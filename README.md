@@ -226,14 +226,53 @@ To use  it properly, it is also  a good  idea  to install “dos2unix”.  dos2u
 <img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/apache-install-dos2unix.png"/>
 
 4. To give permissions to ClouderaSparkSetup.sh file, run the following commands:
-**dos2unix /home/cloudera/ClouderaSparkSetup.sh
- chmod 755 /home/cloudera/ClouderaSparkSetup.sh**
+**dos2unix /home/cloudera/ClouderaSparkSetup.**
+**chmod 755 /home/cloudera/ClouderaSparkSetup.sh**
  <img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/apache-permissions.png"/>
  
  5. Run the following command to execute the ClouderaSparkSetup.sh script: sh ClouderaSparkSetup.sh <Datalake Directory> <Master Node FQDN> <inputfile.txt> <Datalake Endpoint for the testdrive>
-**Note**: Replace the above values from NodeDetails and give the Name of the input file that you have just uploaded in Hue in the place of <inputfile.txt>.
-Example: sh ClouderaSparkSetup.sh demotdah6k cdmstr-6ce17224.eastus.cloudapp.azure.com  inputfile.txt
-adl://cddatalakeah6k.azuredatalakestore
+**Note**: Replace the above values from **NodeDetails** and give the Name of the input file that you have just uploaded in Hue in the place of <inputfile.txt>.
+**Example:** 
+sh ClouderaSparkSetup.sh demotdah6k cdmstr-6ce17224.eastus.cloudapp.azure.com  inputfile.txt adl://cddatalakeah6k.azuredatalakestore
+<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/apache-clouderaspark-setup-execute.png"/>
+  
+6. By executing the above script, the data has been stored to ADLS using Spark application.
+**Note:** Please visit section 5.2 in the Reference section for additional details and help for any error messages you may encounter.
+
+### 3.5: Viewing Jobs in UI
+Next, navigate to the Yarn/Spark UI to see the WordCount Spark job.
+1. Go to http:// **<Manager Node FQDN>**:7180/cmf/home
+**Example: http://cdedge-4f171cc5.eastus.cloudapp.azure.com:7180**
+2. Click on **YARN-1**.
+ <img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/apache-click-yarn1.png"/>
+  
+3. Click on the Applications tab in the top navigation menu to view the available jobs.
+<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/apache-click-applications.png"/>
+Each job has Summary and Detail information. A job Summary includes the following attributes: **start & end timestamps,query name (if the job is part of a Hive  query),queue,job type,job ID, and user**.
+
+4. You can also see the available applications by navigating to the Spark UI:
+  1. Go to http://**<Manager Node private FQDN>**:7180/cmf/home
+     **Example: http://cdedge-4f171cc5.eastus.cloudapp.azure.com:7180**
+  2. Click on **SPARK_ON_YARN-1** (May appear as 'SPARK_ON....')
+<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/apache-click-spark-on-yarn.png"/>
+  
+  3. Navigate to the History Server WEB UI by going to http://<Master FQDN>:18088
+     **Example: http://:18088/cdedge-4f171cc5.eastus.cloudapp.azure.com:18088/**
+  <img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/apache-historyserver.png"/>
+  
+  
+
+
+  
+
+
+
+
+
+
+
+  
+  
 
 
  
