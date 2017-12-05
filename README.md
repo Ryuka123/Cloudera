@@ -212,7 +212,14 @@ Note: Please ensure the inputfile is uploaded to the path /user/admin (see below
 
 ### 3.4: Apache Spark (Run Spark App)
 Spark is the open standard for flexible in-memory data processing that enables batch, realtime,and advanced analytics on the Apache Hadoop platform.
-To use  it properly, it is also  a good  idea  to install “dos2unix”.  dos2unix is  a program  that converts DOS to UNIX text file format, ensuring everything will run in a Linux environment
+To use  it properly, it is also  a good  idea  to install “dos2unix”.  dos2unix is  a program  that converts DOS to UNIX text file format, ensuring everything will run in a Linux environment.
+
+1. Login to the Master VM by typing in the below command in the open terminal session from before (copy/paste may not work):ssh – i sshKeyForAzureVM cloudera@<Master Node FQDN>
+<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/Apache-login-mastervm.png"/>
+  
+  
+
+
 
 
 
