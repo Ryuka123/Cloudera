@@ -1,7 +1,6 @@
-<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/Cloudera-logo-image.png"/>
+![](Images/Cloudera-logo-image.png "")
 
-
-<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/cloudera-microsoftAzure.png"/>
+![](Images/cloudera-microsoftAzure.png "")
 
 
 <!-- TOC -->
@@ -69,7 +68,7 @@ a  web-based  user  interface  that  makes  administration  of your  enterprise 
 straightforward. It also includes the Cloudera Manager API, which you can use to obtain
 cluster health information and metrics, as well as configure Cloudera Manager.
 
-<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/cloudera-manager.png"/>
+![](Images/cloudera-manager.png "")
 
 ### Module 2: Objective
 NOTE: As this test drive provides access to the full Cloudera Director platform, deployment can
@@ -90,7 +89,7 @@ The following diagram shows how the data in this test case flows from a .TXT fil
 to
 ADLS, processed by Spark.
 
-<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/cloudera-lab-dataflow.png"/>
+![](Images/cloudera-lab-dataflow.png "")
 
 
 ### Module 3: Getting Started
@@ -101,80 +100,80 @@ allocated to you. Copy the DNS URLs for the Cloudera Director,Manager and Master
 
 1. Go to the Resource Groups section and search by name for the Resource Group provided
 to you.
-<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/Click-on-RG.png"/>
+![](Images/Click-on-RG.png "")
 
 2. Go to the virtual machine starting with "cldr" Cloudera Director DNS Name.
-<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/Click-on-VM.png"/>
+![](Images/Click-on-VM.png "")
 
 Click on the Cloudera Director virtual machine to get the DNS name. (See below)
-<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/Cloudera-copy-DNSname.png"/>
+![](Images/Cloudera-copy-DNSname.png "")
 
 3. Go to the virtual machine starting with “cdedge” for the Cloudera Manager DNS name.
-<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/Cloudera-click-on-vm2.png"/>
+![](Images/Cloudera-click-on-vm2.png "")
 
 Click on the Cloudera Manager virtual machine to get the DNS name. (See below)
-<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/Cloudera-click-on-DNSname.png"/>
+![](Images/Cloudera-click-on-DNSname.png "")
 
 4. Go to the virtual machine starting with “cdmstr” for the Cloudera Master DNS name.
-<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/cloudera-click-mastervm.png"/>
+![](Images/cloudera-click-mastervm.png "")
 
 Click on the Cloudera Master virtual machine to get the DNS name. (See below).
-<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/cloudera-cpopy-masterdns.png"/>
+![](Images/cloudera-cpopy-masterdns.png "")
 
 You must also access the Cloudera backend cluster details to get the  Node Details. This is
 explained below.
 1. Log in to the Cloudera Director VM using the Cloudera Director FQDN address gathered  from  the previous steps, and use an SSH tool like PuTTY (or Terminal on Mac), which we’ll refer to in this walkthrough.[(Download PuTTY here)](https://putty.en.softonic.com/).
 E.g. cldrhyic.eastus.cloudapp.azure.com
-<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/Clouder-putty.png"/>
+![](Images/Clouder-putty.png "")
 
 2. Once connected, login to the Cloudera Director VM using the Director Username and then the Director Password from the provided test drive access credentials.
 (Note:Passwords are hidden when typed or pasted in Linux terminals)
-<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/cloudera-login-using-putty.png"/>
+![](Images/cloudera-login-using-putty.png "")
 
 All the Cloudera Backend cluster details are present in the NodeDetails file. Copy the NodeDetails into a text file or Word document for  reference, these details will be used later. To open the NodeDetails file use the following command.
 cat NodeDetails
 The  NodeDetails  file  contains  Node  and  URI  details  used  by  the  Cloudera  test  drive environment.These are gathered using a script which pulls required data using the API calls.
-<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/cloudera-node-details.png"/>
+![](Images/cloudera-node-details.png "")
 
 ### 3.2: Accessing Cloudera Manager from Cloudera Director Web UI
 After deploying a cluster, you can manage it using Cloudera Manager.
 
 1. Access the Cloudera Director Web UI using the Cloudera Director Access URL provided in the Access Information. Enter it into a web browser.
 Eg:cldrhyic.eastus.cloudapp.azure.com:7189
-<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/cloudera-webUI.png"/>
+![](Images/cloudera-webUI.png "")
 
 2. Accept the End User License Terms and Conditions and click on Continue.
-<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/cloudera-click-continue.png"/>
+![](Images/cloudera-click-continue.png "")
 
 3. Login to the Cloudera Director web console using CD-WEB UI Username and Password from the Access Information.
-<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/login-cloudera-director.png"/>
+![](Images/login-cloudera-director.png "")
 
 4. The  Cloudera  Director  console  should  open.  Click  on  the Cloudera  Manager link  from the Cloudera Director Dashboard, as shown below.
-<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/click-clouderamanager-link.png"/>
+![](Images/click-clouderamanager-link.png "")
 
 5. Use the Cloudera Manager FQDN address, along with the port number, and paste it in new browser tab.
 EX:cdedge-4f171cc5.eastus.cloudapp.azure.com:7180
-<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/clodera-FQDN-login.png"/>
+![](Images/clodera-FQDN-login.png "")
 
 6. Login to the Cloudera Manager Console using CM-WEB UI Username and CM-WEB UI Password from the Access Information.
-<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/login-clouderManager-console.png"/>
+![](Images/login-clouderManager-console.png "")
 
 Note:The next step is to Restart Stale Services. We must do this to get the Azure Service Principle updated to the configuration file site-core.xml, which is required to integrate with Azure Data Lake Store.
 
 7. In Cloudera Manager, click on the HDFS-1 service to Restart Stale Services.
-<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/cloudera-click-HDFS.png"/>
+![](Images/cloudera-click-HDFS.png "")
 
 8. Click on the Restart Stale Services icon as shown in the below screenshot.
-<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/Cloudera-click-restart-Stale-services.png"/>
+![](Images/Cloudera-click-restart-Stale-services.png "")
 
 9. Click  on  the Restart  Stale  Services button  so  the  cluster  can  read  the  new  configuration information.
-<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/cloudera-click-Restart-stale2.png"/>
+![](Images/cloudera-click-Restart-stale2.png "")
 
 10. Click on the Restart Now button
-<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/Cloudera-click-restart-Now.png"/>
+![](Images/Cloudera-click-restart-Now.png "")
 
 11. Wait until all requested services are restarted. Once all the services are restarted, click on the Finish button.
-<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/Cloudera-click-finish.png"/>
+![](Images/Cloudera-click-finish.png "")
 
 12. Now we have the Cloudera Director ready, with Cloudera Manager and Cluster (1 master and 3 workers).
 
@@ -185,28 +184,28 @@ Hue is a set of web applications that enable you to interact with a CDH cluster.
 
 1. Copy the Cloudera Hue Web URL using the cloudera master DNS server url with port 8888 as shown in below example and paste it in browser – which opens the Hue console.
 Example: http://cdmstr-6ce17224.eastus.cloudapp.azure.com:8888
-<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/cloudera-hue.png"/>
+![](Images/cloudera-hue.png "")
 
 2. Create a Hue Account by giving Cloudera Hue Web UI Username/Password from the NodeDetailsfile. (Username/Password: admin/admin)
-<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/cloudera-hue-create-account.png"/>
+![](Images/cloudera-hue-create-account.png "")
 
 3. You will login into the Hue dashboard. On the right side of the page, click on the HDFS browser icon, as shown in the below screenshot.
 
 Note: CDH 5.12 has a new Hue UI. We recommend switching to Hue 3 from the admintab (see screenshot below).
 
-<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/cloudera-hue-page.png"/>
+![](Images/cloudera-hue-page.png "")
 
 4. Copy the data of inputfile from the below link. Give any name to the file (Eg: 'data' or 'input'), then save it in input.txt format.
 https://aztdrepo.blob.core.windows.net/clouderadirector/inputfile.txt Once ready, click on Upload on the Hue file browser page (see below).
 
 Note: Please ensure the inputfile is uploaded to the path /user/admin (see below):
 
-<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/cloudera-hue-click-upload.png"/>
+![](Images/cloudera-hue-click-upload.png "")
 
 5. Select the saved .txt file to upload it.
-<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/cloudera-hue-textfiles.png"/>
+![](Images/cloudera-hue-textfiles.png "")
 
-<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/clousera-hue-uploadfiles2.png"/>
+![](Images/clousera-hue-uploadfiles2.png "")
 
 6. The .txt file is now uploaded to Hue. The Spark application will use this data as input and provide the output to ADLS.
 
@@ -215,26 +214,26 @@ Spark is the open standard for flexible in-memory data processing that enables b
 To use  it properly, it is also  a good  idea  to install “dos2unix”.  dos2unix is  a program  that converts DOS to UNIX text file format, ensuring everything will run in a Linux environment.
 
 1. **Login** to the Master VM by typing in the below command in the open terminal session from before (copy/paste may not work):ssh – i     sshKeyForAzureVM cloudera@**Master Node FQDN**
- <img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/Apache-login-mastervm.png"/>
+ ![](Images/Apache-login-mastervm.png "")
   
 2. **Download** the following script file using the below command.The script contains the spark app (WordCount). The application counts the number of occurrences of each letter in words which have more characters than a given threshold.
 **wget** https://raw.githubusercontent.com/sysgain/cloudera-spectra-vip/master/scripts/ClouderaSparkSetup.sh
-<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/apache-download-script.png"/>
+![](Images/apache-download-script.png "")
 
 3. To install dos2unix, run the following command:
 **sudo yum install -y dos2unix**
-<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/apache-install-dos2unix.png"/>
+![](Images/apache-install-dos2unix.png "")
 
 4. To give permissions to ClouderaSparkSetup.sh file, run the following commands:
 **dos2unix /home/cloudera/ClouderaSparkSetup.**
 **chmod 755 /home/cloudera/ClouderaSparkSetup.sh**
- <img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/apache-permissions.png"/>
+ ![](Images/apache-permissions.png "")
  
  5. Run the following command to execute the ClouderaSparkSetup.sh script: sh ClouderaSparkSetup.sh **Datalake Directory** **Master Node FQDN** **inputfile.txt** **Datalake Endpoint for the testdrive**
 **Note**: Replace the above values from **NodeDetails** and give the Name of the input file that you have just uploaded in Hue in the place of **inputfile.txt**.
 **Example:** 
 sh ClouderaSparkSetup.sh demotdah6k cdmstr-6ce17224.eastus.cloudapp.azure.com  inputfile.txt adl://cddatalakeah6k.azuredatalakestore
-<img src="https://github.com/ShivaniThadiyan/Cloudera/blob/master/Images/apache-clouderaspark-setup-execute.png"/>
+![](Images/apache-clouderaspark-setup-execute.png "")
   
 6. By executing the above script, the data has been stored to ADLS using Spark application.
 **Note:** Please visit section 5.2 in the Reference section for additional details and help for any error messages you may encounter.
