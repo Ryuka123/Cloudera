@@ -26,7 +26,8 @@
   - [5.2: Error Messages While Running the Spark Job](#5.2)
 <!-- /TOC -->
 
-### Module 1: About Cloudera
+<a name="Module-1"></a>
+### Module 1: About Cloudera ###
 Cloudera is an open-source Apache Hadoop distribution, CDH (Cloudera Distribution Including
 Apache Hadoop) targets enterprise-class deployments of that technology.
 Cloudera provides a scalable, flexible, integrated platform that makes it easy to manage rapidly
@@ -44,7 +45,8 @@ that handles installation and updates on a cluster in few clicks.
 Cloudera  also  develop  their  own  projects  such  as  Impala  or  Kudu  that  improve  hadoop
 integration and responsiveness in the industry.
 
-### 1.1: Cloudera Director
+<a name="1.1"></a>
+### 1.1: Cloudera Director ###
 Cloudera Director enables reliable self-service for using CDH and Cloudera Enterprise Data
 Hub in the cloud.
 
@@ -62,7 +64,8 @@ Cloudera  Manager  instances  and  CDH clusters,  with  multiple  users and user
 server  works  well  for  launching  and  managing  large  numbers  of  clusters  in  a  production
 environment.
 
-### 1.2: Cloudera Manager
+<a name="1.2"></a>
+### 1.2: Cloudera Manager ###
 Cloudera  Manager  is  a  sophisticated  application  used  to  deploy,  manage,  monitor,  and
 diagnose issues with your CDH deployments. Cloudera Manager provides the Admin Console,
 a  web-based  user  interface  that  makes  administration  of your  enterprise  data  simple  and
@@ -71,7 +74,8 @@ cluster health information and metrics, as well as configure Cloudera Manager.
 
 ![](Images/cloudera-manager.png "")
 
-### Module 2: Objective
+<a name="Module-2"></a>
+### Module 2: Objective ###
 NOTE: As this test drive provides access to the full Cloudera Director platform, deployment can
 sometimes take up to 45 minutes. While you wait, please feel free to review to helpful content
 in this manual and on [Cloudera’s Azure Marketplace product page](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/cloudera.clouderaedh), or on the Cloudera website.
@@ -92,8 +96,9 @@ ADLS, processed by Spark.
 
 ![](Images/cloudera-lab-dataflow.png "")
 
-
-### Module 3: Getting Started
+<a name="Module-3"></a>
+### Module 3: Getting Started ###
+<a name="3.1"></a>
 ### 3.1: Accessing Cloudera Backend cluster details
 
 Please login to the Azure portal and go to the Cloudera Director HOL Azure resource group
@@ -136,7 +141,8 @@ cat NodeDetails
 The  NodeDetails  file  contains  Node  and  URI  details  used  by  the  Cloudera  test  drive environment.These are gathered using a script which pulls required data using the API calls.
 ![](Images/cloudera-node-details.png "")
 
-### 3.2: Accessing Cloudera Manager from Cloudera Director Web UI
+<a name="3.2"></a>
+### 3.2: Accessing Cloudera Manager from Cloudera Director Web UI ###
 After deploying a cluster, you can manage it using Cloudera Manager.
 
 1. Access the Cloudera Director Web UI using the Cloudera Director Access URL provided in the Access Information. Enter it into a web browser.
@@ -180,7 +186,8 @@ Note:The next step is to Restart Stale Services. We must do this to get the Azur
 
 Note: Please visit section in the Reference section later in this guide for additional details and help for any error messages you may encounter.
 
-### 3.3: Hue
+<a name="3.3"></a>
+### 3.3: Hue ###
 Hue is a set of web applications that enable you to interact with a CDH cluster. Hue applications let you browse HDFS and manage a Hive metastore. They also let you run Hive and Cloudera Impala queries, HBase and Sqoop commands, Pig scripts, MapReduce jobs, and Oozie workflows.
 
 1. Copy the Cloudera Hue Web URL using the cloudera master DNS server url with port 8888 as shown in below example and paste it in browser – which opens the Hue console.
@@ -210,7 +217,8 @@ Note: Please ensure the inputfile is uploaded to the path /user/admin (see below
 
 6. The .txt file is now uploaded to Hue. The Spark application will use this data as input and provide the output to ADLS.
 
-### 3.4: Apache Spark (Run Spark App)
+<a name="3.4"></a>
+### 3.4: Apache Spark (Run Spark App) ###
 Spark is the open standard for flexible in-memory data processing that enables batch, realtime,and advanced analytics on the Apache Hadoop platform.
 To use  it properly, it is also  a good  idea  to install “dos2unix”.  dos2unix is  a program  that converts DOS to UNIX text file format, ensuring everything will run in a Linux environment.
 
@@ -239,7 +247,8 @@ sh ClouderaSparkSetup.sh demotdah6k cdmstr-6ce17224.eastus.cloudapp.azure.com  i
 6. By executing the above script, the data has been stored to ADLS using Spark application.
 **Note:** Please visit section 5.2 in the Reference section for additional details and help for any error messages you may encounter.
 
-### 3.5: Viewing Jobs in UI
+<a name="3.5"></a>
+### 3.5: Viewing Jobs in UI ###
 Next, navigate to the Yarn/Spark UI to see the WordCount Spark job.
 1. Go to http:// **Manager Node FQDN**:7180/cmf/home
 **Example: http://cdedge-4f171cc5.eastus.cloudapp.azure.com:7180**
@@ -262,7 +271,8 @@ Each job has Summary and Detail information. A job Summary includes the followin
 
 **Note:** Please visit section 5.2 in the Reference section for additional details and help for any error messages you may encounter.
 
-### 3.6 Hive
+<a name="3.6"></a>
+### 3.6 Hive ###
 Apache Hive is a data warehouse software project built on top of Apache Hadoop for providing data summarization, query, and analysis. Hive gives a SQL-like interface to query data stored in various databases and file systems that integrate with Hadoop. 
 Now we will create a Hive table from the output of the Spark application stored on ADLS and run a Hive query from Hue.
 
@@ -279,7 +289,8 @@ terminated by '\n' stored as textfile location "**Output Data files on Datalake 
 **Select * from tablename**
 ![](Images/hive-query2.png "")
 
-### 3.7 Impala
+<a name="3.7"></a>
+### 3.7 Impala ###
 Impala  is  an  open  source,  massively  parallel  processing  query  engine  on  top  of  clustered systems like Apache  Hadoop.  It  is an interactive SQL  like  query  engine that runs on top of Hadoop Distributed File System (HDFS). It integrates with HIVE metastore to share the table information between both the components.
 
 1. **Note:** Impala now integrates with ADLS from version CDH 5.12.
@@ -297,8 +308,10 @@ Impala  is  an  open  source,  massively  parallel  processing  query  engine  o
   
 5. You have now successfully run the Impala query using Hue!
 
-### Module 4: Power BI integration with Data Lake Store and Impala (Optional)
-### 4.1: Integrating with Data Lake Store
+<a name="Module-4"></a>
+### Module 4: Power BI integration with Data Lake Store and Impala (Optional) ###
+<a name="4.1"></a>
+### 4.1: Integrating with Data Lake Store ###
 1. Launch Power BI Desktop on your computer.
 2. From the Home ribbon, click Get Data, and then click More. In the Get Data dialog box, click Azure, click Azure Data Lake Store, and then click Connect.
 ![](Images/powerBI-desktop.png "")
@@ -355,7 +368,8 @@ b)Drag the columns that you want to use and represent in your pie-chart from the
 
 16. From the file menu, click Save to save the visualization as a Power BI Desktop file.
 
-### 4.2: Integrating with Impala
+<a name="4.2"></a>
+### 4.2: Integrating with Impala ###
 1. Go to point 7 of section 4.7, where you ran a query from the table created using the output from ADLS copied to local HDFS.
 ![](Images/Cloudera-ADLS-HDFS.png "")
 
@@ -371,8 +385,10 @@ b)Drag the columns that you want to use and represent in your pie-chart from the
 ![](Images/PowerBI-load-selectdata.png "")
 You have successfully visualized the content exported from impala using powerBI.
 
-### Module 5: Reference
-### 5.1: Restart Cloudera Management Service
+<a name="Module-5"></a>
+### Module 5: Reference ###
+<a name="5.1"></a>
+### 5.1: Restart Cloudera Management Service ###
 You may need to restart Cloudera Management Service for the below errors:
 ### Errors:
 * Request to the Service Monitor failed. This may cause slow page responses.View the status of the Service Monitor.
@@ -394,7 +410,8 @@ You may need to restart Cloudera Management Service for the below errors:
 
 **Note:** If you performed this restart in response to errors, please now re-run section 4.3 after performing the above steps.
 
-### 5.2: Error Messages While Running the Spark Job
+<a name="5.2"></a>
+### 5.2: Error Messages While Running the Spark Job ###
 1. You may see a few errors popping up while executing the Spark job that can safely be ignored, such as the ones below.
 **Note:** The permissions get properly set in the .sh file.
 sh ClouderaSparkSetup.sh demotdweti 10.3.0.6 mkdir: Permission denied: user=cloudera,access=WRITE, inode="/":hdfs:supergroup:drwxr-xr-x --2017-07-11 16:55:54--https://aztdrepo.blob.core.windows.net/clouderadirector/wordcount.jar
